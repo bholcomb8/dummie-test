@@ -50,13 +50,48 @@ const config: HardhatUserConfig = {
     },
     networks: {
         ethereum: {
-            eid: EndpointId.ETHEREUM_V2_TESTNET,
-            url: process.env.RPC_URL_ETHEREUM || 'https://mainnet.infura.io/v3/',
+            eid: EndpointId.ETHEREUM_V2_MAINNET,
+            url:
+                process.env.RPC_URL_ETHEREUM || 'https://eth-mainnet.g.alchemy.com/v2/Afv3a2XqqTUBXG295UjvDva-CrPntDHB',
             accounts,
         },
         arbitrum: {
-            eid: EndpointId.ARBITRUM_V2_TESTNET,
-            url: process.env.RPC_URL_ARBITRUM || 'https://arbitrum-mainnet.infura.io',
+            eid: EndpointId.ARBITRUM_V2_MAINNET,
+            url:
+                process.env.RPC_URL_ARBITRUM ||
+                'https://bold-alien-needle.arbitrum-mainnet.quiknode.pro/49bc5f3a1c8cdb3fd476cb8eac6d061687b36d8b/',
+            accounts,
+        },
+        optimism: {
+            eid: EndpointId.OPTIMISM_V2_MAINNET,
+            url:
+                process.env.RPC_URL_OPTIMISM || 'https://opt-mainnet.g.alchemy.com/v2/BdE-iUrA82X7TOCivxJn3jnpNnVcJhXY',
+            accounts,
+        },
+        base: {
+            eid: EndpointId.BASE_V2_MAINNET,
+            url: process.env.RPC_URL_BASE || 'https://base-mainnet.g.alchemy.com/v2/xFZGQE76v8lgEhEWFpzsOb6y_b_hmpTJ',
+            accounts,
+        },
+        avalanche: {
+            eid: EndpointId.AVALANCHE_V2_MAINNET,
+            url:
+                process.env.RPC_URL_AVALANCHE ||
+                'https://layerzero.avax.network/ext/bc/C/rpc?token=dde55dbe017990fe15ee4c57117b45c6df90d7e6f81c3df205432cee98f6e3cf',
+            accounts,
+        },
+        bsc: {
+            eid: EndpointId.BSC_V2_MAINNET,
+            url:
+                process.env.RPC_URL_BSC ||
+                'https://still-restless-pond.bsc.quiknode.pro/aabcf0825fb43e00fcf902ced32b731dffda3f8a/',
+            accounts,
+        },
+        polygon: {
+            eid: EndpointId.POLYGON_V2_MAINNET,
+            url:
+                process.env.RPC_URL_POLYGON ||
+                'https://polygon-mainnet.g.alchemy.com/v2/5EdvdJJNN3WI0Di6kKyreh97W0Gf4cB5',
             accounts,
         },
     },
